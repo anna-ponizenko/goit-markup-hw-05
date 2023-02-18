@@ -16,6 +16,7 @@
 
   --indent: 24px;
   --items: 4;
+  --anim-fast: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -121,6 +122,8 @@ body {
   padding-bottom: 24px;
   font-weight: 500;
   color: var(--title-text-color);
+
+  transition: color var(--anim-fast);
 }
 .menu-link:hover,
 .menu-link:focus {
@@ -140,6 +143,8 @@ body {
   padding-top: 24px;
   padding-bottom: 24px;
   color: var(--primary-text-color);
+
+  transition: color var(--anim-fast);
 }
 .contact-link:hover,
 .contact-link:focus {
@@ -204,6 +209,8 @@ body {
   background-color: var(--primary-brand-color);
   color: var(--primary-white-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  transition: background-color var(--anim-fast);
 }
 
 .hero-btn:hover,
@@ -365,6 +372,8 @@ img {
   width: 40px;
   height: 40px;
   color: var(--light-bg-clr);
+
+  transition: background-color var(--anim-fast);
 }
 
 .social-link:hover,
@@ -391,6 +400,8 @@ img {
   border: 1px solid var(--subtle-txt);
   border-radius: 4px;
   color: var(--subtle-txt);
+
+  transition: color var(--anim-fast);
 }
 
 .customers-link:hover,
@@ -456,6 +467,8 @@ footer {
 
 .footer-link {
   background-color: rgba(255, 255, 255, 0.1);
+
+  transition: background-color var(--anim-fast);
 }
 
 .footer-link:hover,
@@ -490,6 +503,8 @@ footer {
 
   background: var(--light-bg-clr);
   color: var(--pressed-color);
+
+  transition: color var(--anim-fast) background-color var(--anim-fast);
 }
 
 .filter-btn:hover,
@@ -546,6 +561,8 @@ footer {
 
 .card-link {
   display: block;
+
+  transition: color var(--anim-fast);
 }
 
 .card-link:hover,
