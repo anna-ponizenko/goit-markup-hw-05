@@ -58,7 +58,6 @@ body {
 /* HEADER SECTION */
 
 .header {
-  position: fixed;
   top: 0;
   width: 100%;
   z-index: var(--header-idx);
@@ -570,6 +569,10 @@ footer {
   transition: color var(--anim-fast);
 }
 
+.card-link:hover,
+.card-link:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
 .card-link:hover .overlay,
 .card-link:focus .overlay {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
@@ -595,4 +598,56 @@ footer {
 
   transform: translate(0, 100%);
   transition: var(--anim-fast);
+}
+
+/* MODAL WINDOW*/
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+
+  background-color: rgba(46, 47, 66, 0.4);
+  transition: opasity var(--anim-fast), visibility var(--anim-fast);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 500px;
+  transform: translateX(-50%) translateY(-50%);
+
+  border-radius: 4px;
+  background-color: #fcfcfc;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.modal-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: var(--accent-color);
+}
+
+.modal-icon {
 }
