@@ -623,20 +623,27 @@ footer {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 400px;
-  height: 500px;
   transform: translateX(-50%) translateY(-50%);
 
+  width: 400px;
+  height: 500px;
   border-radius: 4px;
   background-color: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  transition: transform var(--anim-fast), opacity var(--anim-fast);
 }
 
+.backdrop.backdrop.is-hidden .modal {
+  transform: translateX(-50%) translateY(-75%);
+  opacity: 0;
+}
 .modal-btn {
   display: flex;
   align-items: center;
   justify-content: center;
+
   position: absolute;
   top: 24px;
   right: 24px;
@@ -647,7 +654,4 @@ footer {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   background-color: var(--accent-color);
-}
-
-.modal-icon {
 }
